@@ -1,0 +1,18 @@
+.cards
+	responsive('margin-left', -25px)
+	responsive('margin-right', -25px)
+	padding-top 20px
+
+	+below($mobile)
+		margin-left auto
+		margin-right auto
+
+	&__card,
+	&__promo
+		display inline-block
+		vertical-align top
+		responsive('margin', 25px)
+
+		+below($mobile)
+			margin-left auto
+			margin-right auto

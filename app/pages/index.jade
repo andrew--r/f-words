@@ -1,0 +1,11 @@
+extends ../layouts/main
+
+include ../blocks/cards/cards
+include ../blocks/content/content
+
+block head
+	- var pageTitle = 'Феминитивы';
+
+block content
+	+cards()
+	+content()

@@ -1,0 +1,40 @@
+$cardFontSize = 15px
+
+
+.card
+	display block
+	size(26.666666666666666666666666666667em, 13.333333333333333333333333333333em)
+	padding-top 1.666666666666667em
+	padding-bottom 1.666666666666667em
+	padding-right 3em
+	padding-left 2em
+	font-size $cardFontSize
+	color #fff
+	border-radius 2em
+	border 1px solid #fff
+	transition border-color .3s ease
+	cursor pointer
+
+	+below($desktop)
+		font-size $cardFontSize * 0.9
+
+	+below($tablet)
+		font-size $cardFontSize * 0.8
+
+	+below($mobile)
+		width 24em
+
+	&:hover
+		transition none
+		color #fff
+		border-color $accent
+
+	&--small
+		width 22em
+
+	&__title
+		display block
+		margin-bottom 0.38em
+		font-weight 700
+		font-size 2em
+		line-height 1

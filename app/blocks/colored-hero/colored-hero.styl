@@ -1,0 +1,57 @@
+$colors = {
+	accent: $accent,
+	green: #0AA323,
+	red: #FF0000,
+	blue: #00A0C6,
+	purple: #8916D3,
+	white: #FFFFFF,
+	brown: #D59758,
+	black: #000000,
+	pink: #FF8D8D,
+}
+
+.colored-hero
+	display block
+	size($promoCardWidth, $promoCardHeight)
+	padding 0.5625em 1.625em
+	font-size $promoCardFontSize
+	border-radius 2em
+	border 1px solid #fff
+	transition none
+
+	+below($desktop)
+		font-size $promoCardTabletFontSize
+
+	+below($tablet)
+		font-size $promoCardMobileFontSize
+
+	+below($mobile)
+		width $promoCardMobileWidth
+		font-size $promoCardSmallMobilesFontSize
+
+	&:hover
+		color inherit
+		border-color inherit
+
+	for color, value in $colors
+		&[data-color=\"{color}\"]
+			background value
+
+	&__title
+		display block
+		font-weight 900
+		font-size 6.5em
+		line-height 1
+
+		.colored-hero[data-color="white"] &
+			color #000
+
+	&__annotation
+		width 70%
+		font-size 1.125em
+		color #000
+
+		.colored-hero[data-color="black"] &,
+		.colored-hero[data-color="red"] &,
+		.colored-hero[data-color="purple"] &
+			color #fff

@@ -1,0 +1,6 @@
+include ../colored-hero/colored-hero
+
+mixin promo-cards()
+	+b.promo-cards&attributes(attributes)
+		each color, index in ['accent', 'green', 'red', 'blue', 'purple', 'white', 'brown', 'black', 'pink']
+			+colored-hero(color, jv0)(class="promo-cards__item" data-index=index)

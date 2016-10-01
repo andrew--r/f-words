@@ -1,0 +1,90 @@
+.factoid
+	display flex
+	align-items flex-start
+	width auto
+	height 12.5em
+	padding .625em 0
+	font-size 16px
+	border-top 1px solid $accent
+	border-bottom 1px solid $accent
+
+	+below($desktop)
+		height 11.25em
+
+	+below($tablet)
+		height 10em
+
+	&--illustration
+		justify-content space-between
+		width 20.625em
+		padding-left 1em
+		padding-right 1em
+
+		+below($tablet)
+			width 19em
+
+	&--text
+		display block
+		width 25em
+		padding-top 1.6875em
+
+		+below($desktop)
+			width 20em
+			padding-top 1.3em
+
+		+below($tablet)
+			padding-top 1em
+
+		+below($mobile)
+			width 18em
+
+	&__title
+		display block
+		margin-bottom 0.30769230769230769230769230769231em
+		font-weight 700
+		font-size 2.4375em
+		line-height 1
+		text-transform uppercase
+		letter-spacing .2em
+		color $accent
+
+		+below($desktop)
+			font-size 1.8em
+
+		+below($mobile)
+			font-size 1.7em
+
+	&__annotation
+		padding-right 3.75em
+		line-height 1.1875em
+
+		+below($tablet)
+			font-size 15px
+
+	&__number
+		padding-right 0.05555555555555555555555555555556em
+		font-weight 700
+		font-size 11.25em // 180px
+		line-height 1
+		color $accent
+
+		+below($desktop)
+			font-size 10em
+
+		+below($tablet)
+			font-size 9em
+
+	&__text
+		max-width 9.375em
+		padding-top 1em
+
+		+below($tablet)
+			font-size 15px
+
+		p
+			&:not(:last-child)
+				margin-bottom 0.1875em
+
+	&__illustration
+		max-height 100%
+		padding 1em 0

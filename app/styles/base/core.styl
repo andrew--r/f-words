@@ -1,0 +1,52 @@
+responsive(property, value)
+	{property} value
+
+	+below($largeDesktop)
+		{property} value * 0.9
+
+	+below($desktop)
+		{property} value * 0.8
+
+	+below($tablet)
+		{property} value * 0.7
+
+	+below($mobile)
+		{property} value * 0.6
+
+html,
+body
+	height 100%
+	box-sizing border-box
+
+*,
+*::before,
+*::after
+	box-sizing inherit
+
+body
+	font-size $fontSize
+	line-height $lineHeight
+	font-family $fontFamily
+	color #fff
+	background #000
+
+a
+	color inherit
+	border-bottom 1px solid rgba(#fff, .3)
+	text-decoration none
+	transition all .2s ease
+
+	&:hover
+		color $accent
+		border-color rgba($accent, .4)
+		transition none
+
+.wrap
+	responsive('padding-top', $siteVerticalPadding)
+	responsive('padding-bottom', $siteVerticalPadding)
+	responsive('padding-left', $siteHorizontalPadding)
+	responsive('padding-right', $siteHorizontalPadding)
+
+	+below($mobile)
+		padding-left 15px
+		padding-right 15px

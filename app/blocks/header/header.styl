@@ -1,0 +1,24 @@
+$titleFontSize = 70px
+$subtitleFontSize = 28px
+
+.header
+	max-width 780px
+	padding-bottom 25px
+
+	&__title
+		responsive('padding-bottom', 12px)
+		responsive('font-size', $titleFontSize)
+		font-weight 900
+		line-height 1.1
+
+		+below($mobile)
+			font-size $titleFontSize * 0.5
+
+	&__subtitle
+		responsive('font-size', $subtitleFontSize)
+
+		+below($mobile)
+			font-size $subtitleFontSize * 0.6
+
+	&__muted
+		color #3F3F3F

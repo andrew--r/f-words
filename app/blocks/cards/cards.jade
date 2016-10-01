@@ -1,0 +1,97 @@
+include ../promo-cards/promo-cards
+include ../card/card
+include ../factoid/factoid
+
+mixin cards()
+	+b.cards&attributes(attributes)
+		+e.promo
+			+promo-cards()
+		+e.card
+			+factoid().--text
+				+e.P.title Неологизмы
+				+e.P.annotation Феминитивы&nbsp;&mdash; это неологизмы. У&nbsp;большинства пока нет устоявшихся форм. Используйте формы, которые считаете более правильными и&nbsp;более красивыми.
+		+e.card
+			+card('Авторесса, а&nbsp;не&nbsp;автор', 'http://printdirect.ru/storefront/shared_info/7218723').--small
+		+e.card
+			+card('Авторка, а&nbsp;не&nbsp;автор', 'http://printdirect.ru/storefront/shared_info/7218722').--small
+		+e.card
+			+card('Авторша, а&nbsp;не&nbsp;автор', 'http://printdirect.ru/storefront/shared_info/7218721').--small
+		+e.card
+			+card('Адвокатесса, а&nbsp;не&nbsp;адвокат', 'http://printdirect.ru/storefront/shared_info/7218720').--small
+		+e.card
+			+card('Архитекторша, а&nbsp;не&nbsp;архитектор', 'http://printdirect.ru/storefront/shared_info/7218834')
+		+e.card
+			+card('Блогерица, а&nbsp;не&nbsp;блогер', 'http://printdirect.ru/storefront/shared_info/7218763').--small
+		+e.card
+			+card('Блогерка, а&nbsp;не&nbsp;блогер', 'http://printdirect.ru/storefront/shared_info/7218762').--small
+		+e.card
+			+card('Блогерша, а&nbsp;не&nbsp;блогер', 'http://printdirect.ru/storefront/shared_info/7218761').--small
+		+e.card
+			+card('Блогиня, а&nbsp;не&nbsp;блогер', 'http://printdirect.ru/storefront/shared_info/7218760').--small
+		+e.card
+			+card('Верстальщица, а&nbsp;не&nbsp;верстальщик', 'http://printdirect.ru/storefront/shared_info/7218833')
+		+e.card
+			+card('Дизайнерка, а&nbsp;не&nbsp;дизайнер', 'http://printdirect.ru/storefront/shared_info/7218104')
+		+e.card
+			+card('Дизайнерша, а&nbsp;не&nbsp;дизайнер', 'http://printdirect.ru/storefront/shared_info/7218832')
+		+e.card
+			+factoid()
+				+e.number 3
+				+e.text
+					p На&nbsp;листе три наклейки.
+					p Одна размером примерно с&nbsp;визитку, две&nbsp;&mdash; поменьше: как треть визитки.
+		+e.card
+			+card('Журналистка, а&nbsp;не&nbsp;журналист', 'http://printdirect.ru/storefront/shared_info/7218103')
+		+e.card
+			+card('Иллюстраторка, а&nbsp;не&nbsp;иллюстратор', 'http://printdirect.ru/storefront/shared_info/7218102')
+		+e.card
+			+card('Кондитерка, а&nbsp;не&nbsp;кондитер', 'http://printdirect.ru/storefront/shared_info/7218791').--small
+		+e.card
+			+card('Кондитерша, а&nbsp;не&nbsp;кондитер', 'http://printdirect.ru/storefront/shared_info/7218790').--small
+		+e.card
+			+card('Кулинарка, а&nbsp;не&nbsp;кулинар', 'http://printdirect.ru/storefront/shared_info/7218789').--small
+		+e.card
+			+card('Лингвистка, а&nbsp;не&nbsp;лингвист', 'http://printdirect.ru/storefront/shared_info/7218101')
+		+e.card
+			+card('Маркетологиня, а&nbsp;не&nbsp;маркетолог', 'http://printdirect.ru/storefront/shared_info/7218100')
+		+e.card
+			+card('Менеджерка, а&nbsp;не&nbsp;менеджер', 'http://printdirect.ru/storefront/shared_info/7218788').--small
+		+e.card
+			+card('Менеджерша, а&nbsp;не&nbsp;менеджер', 'http://printdirect.ru/storefront/shared_info/7218787').--small
+		+e.card
+			+card('Переводчица, а&nbsp;не&nbsp;переводчик', 'http://printdirect.ru/storefront/shared_info/7218099')
+		+e.card
+			+card('Писательница, а&nbsp;не&nbsp;писатель', 'http://printdirect.ru/storefront/shared_info/7218098')
+		+e.card
+			+card('Поэтесса, а&nbsp;не&nbsp;поэт', 'http://printdirect.ru/storefront/shared_info/7218786').--small
+		+e.card
+			+card('Программистка, а&nbsp;не&nbsp;программист', 'http://printdirect.ru/storefront/shared_info/7218093')
+		+e.card
+			+card('Редакторка, а&nbsp;не&nbsp;редактор', 'http://printdirect.ru/storefront/shared_info/7218097')
+		+e.card
+			+card('Руководительница, а&nbsp;не&nbsp;руководитель', 'http://printdirect.ru/storefront/shared_info/7218096')
+		+e.card
+			+factoid().--illustration
+				+e.text
+					p Наклейки нужно будет вырезать.
+					p Круглые уголки красивые, но&nbsp;&laquo;Приндирект&raquo; не&nbsp;умеет их&nbsp;делать.
+				+e.IMG.illustration(src='assets/images/scissors.svg')
+		+e.card
+			+card('Священница, а&nbsp;не&nbsp;священник', 'http://printdirect.ru/storefront/shared_info/7218831')
+		+e.card
+			+card('Строительница, а&nbsp;не&nbsp;строитель', 'http://printdirect.ru/storefront/shared_info/7218830')
+		+e.card
+			+card('Студентка, а&nbsp;не&nbsp;студент', 'http://printdirect.ru/storefront/shared_info/7218785').--small
+		+e.card
+			+card('Учительница, а&nbsp;не&nbsp;учитель', 'http://printdirect.ru/storefront/shared_info/7218095')
+		+e.card
+			+card('Физичка, а&nbsp;не&nbsp;физик', 'http://printdirect.ru/storefront/shared_info/7218784').--small
+		+e.card
+			+card('Филологиня, а&nbsp;не&nbsp;филолог', 'http://printdirect.ru/storefront/shared_info/7218094')
+		+e.card
+			+card('Фотографиня, а&nbsp;не&nbsp;фотограф', 'http://printdirect.ru/storefront/shared_info/7218829')
+		+e.card
+			+card('Хирургиня, а&nbsp;не&nbsp;хирург', 'http://printdirect.ru/storefront/shared_info/7218783').--small
+		+e.card
+			+card('Художница, а&nbsp;не&nbsp;художник', 'http://printdirect.ru/storefront/shared_info/7218828')
+	
