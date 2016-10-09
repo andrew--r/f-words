@@ -29,6 +29,9 @@
 				z-index num * -1
 				left $promoCardOffset * num
 
+				+below($desktop)
+					left $promoCardTabletOffset * num
+
 				+below($tablet)
 					left 0
 					top $promoCardMobileOffset * num

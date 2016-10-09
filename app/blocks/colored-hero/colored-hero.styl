@@ -11,6 +11,7 @@ $colors = {
 }
 
 .colored-hero
+	position relative
 	display block
 	size($promoCardWidth, $promoCardHeight)
 	padding 0.5625em 1.625em
@@ -18,6 +19,7 @@ $colors = {
 	border-radius 2em
 	border 1px solid #fff
 	transition none
+	pointer-events none
 
 	+below($desktop)
 		font-size $promoCardTabletFontSize
@@ -33,6 +35,15 @@ $colors = {
 		color inherit
 		border-color inherit
 
+	&::after
+		content ''
+		position absolute
+		top 0
+		right 0
+		bottom 0
+		width $promoCardOffset
+		pointer-events all
+
 	for color, value in $colors
 		&[data-color=\"{color}\"]
 			background value
@@ -47,6 +58,7 @@ $colors = {
 			color #000
 
 	&__annotation
+		display block
 		width 70%
 		font-size 1.125em
 		color #000

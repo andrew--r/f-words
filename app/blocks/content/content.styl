@@ -9,6 +9,9 @@ $maxContentWidth = 1200px
 		padding-bottom 44px
 
 		+below($desktop)
+			flex-wrap wrap
+
+		+below($tablet)
 			display block
 			padding-bottom 22px
 
@@ -18,14 +21,22 @@ $maxContentWidth = 1200px
 		padding-right 26px
 
 		+below($desktop)
-			width 100%
 			padding-bottom 22px
+
+		+below($tablet)
+			width 100%
 
 		&--1-2
 			width 50%
 
+			+below($desktop)
+				width 100%
+
 		&--1-4
 			width 25%
+
+			+below($desktop)
+				width 50%
 
 	&__h3
 		font-weight 700
