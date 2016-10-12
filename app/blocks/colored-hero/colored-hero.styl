@@ -44,6 +44,9 @@ $colors = {
 		width $promoCardOffset
 		pointer-events all
 
+	&:first-child
+		pointer-events all
+
 	for color, value in $colors
 		&[data-color=\"{color}\"]
 			background value
