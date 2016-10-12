@@ -1,6 +1,7 @@
 include ../colored-hero/colored-hero
 
 mixin promo-cards()
+	- var index = 0
 	+b.promo-cards&attributes(attributes)
-		each color, index in ['accent', 'green', 'red', 'blue', 'purple', 'white', 'brown', 'black', 'pink']
-			+colored-hero(color, jv0)(class="promo-cards__item" data-index=index)
+		each link, color in {'accent': 'http://printdirect.ru/storefront/shared_info/7256136', 'green': 'http://printdirect.ru/storefront/shared_info/7256139', 'red': 'http://printdirect.ru/storefront/shared_info/7256138', 'blue': 'http://printdirect.ru/storefront/shared_info/7256140', 'purple': 'http://printdirect.ru/storefront/shared_info/7256137', 'white': 'http://printdirect.ru/storefront/shared_info/7256141', 'brown': 'http://printdirect.ru/storefront/shared_info/7256142', 'black': 'http://printdirect.ru/storefront/shared_info/7256134', 'pink': 'http://printdirect.ru/storefront/shared_info/7256135'}
+			+colored-hero(color, link)(class="promo-cards__item" data-index=index++)
